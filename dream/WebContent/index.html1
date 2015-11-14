@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114x114.png">
+    <!--Loading bootstrap css-->
+
+    <link type="text/css" rel="stylesheet" href="styles/jquery-ui-1.10.4.custom.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/animate.css">
+    <link type="text/css" rel="stylesheet" href="styles/all.css">
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="styles/style-responsive.css">
+    <link type="text/css" rel="stylesheet" href="styles/zabuto_calendar.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/pace.css">
+    <link type="text/css" rel="stylesheet" href="styles/jquery.news-ticker.css">
+    <style>
+
+
+
+</style>
+</head>
+<body>
+    <div>
+    
+        <!--BEGIN BACK TO TOP-->
+        <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
+        <!--END BACK TO TOP-->
+        <!--BEGIN TOPBAR-->
+        <div id="header-topbar-option-demo" class="page-header-topbar">
+            <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+              <img src="images/logo.png"/>
+                <a id="logo" href="index.html" class="navbar-brand"><span style="display: none" class="logo-text-icon"></span></a></div>
+            <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
+                
+             
+            
+                <ul class="nav navbar navbar-top-links navbar-right mbn">
+                 
+                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-envelope fa-fw"></i><span class="badge badge-orange">7</span></a>
+                        
+                    </li>
+                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-tasks fa-fw"></i><span class="badge badge-yellow">8</span></a>
+                        
+                    </li>
+                    <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Robert John</span>&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-user pull-right">
+                            <li><a href="#"><i class="fa fa-user"></i>我的信息</a></li>
+                           <li><a href="#"><i class="fa fa-envelope"></i>我的首页<span class="badge badge-danger">3</span></a></li>
+                        </ul>
+                    </li>
+                    <li id="topbar-chat" class="hidden-xs"><a href="javascript:void(0)" data-step="4" data-intro="&lt;b&gt;Form chat&lt;/b&gt; keep you connecting with other coworker" data-position="left" class="btn-chat"><i class="fa fa-comments"></i><span class="badge badge-info">3</span></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        </div>
+        <!--END TOPBAR-->
+        <div id="wrapper">
+            <!--BEGIN SIDEBAR MENU-->
+            <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
+                data-position="right" class="navbar-default navbar-static-side">
+            <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    
+                     <div class="clearfix"></div>
+                    <li class="active">
+                    <a href="dashboard.html"><i class="fa fa-tachometer fa-fw">
+                        <div class="icon-bg bg-orange"></div>
+                    </i><span class="menu-title">执行概要</span></a></li>
+                    
+                    
+                    <li><a href="sales.html"><i class="fa fa-desktop fa-fw">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">市场分析</span></a>
+                       
+                    </li>
+                    <li><a href="product.html"><i class="fa fa-send-o fa-fw">
+                        <div class="icon-bg bg-green"></div>
+                    </i><span class="menu-title">产品/服务</span></a>
+                       
+                    </li>
+                    <li><a href="#"><i class="fa fa-user fa-fw">
+                        <div class="icon-bg bg-violet"></div>
+                    </i><span class="menu-title">团队构成</span></a>
+                      
+                    </li>
+                    <li><a href="#"><i class="fa fa-file fa-fw">
+                        <div class="icon-bg bg-blue"></div>
+                    </i><span class="menu-title">营销计划</span></a>
+                          
+                    </li>
+                    <li><a href="#"><i class="fa fa-database fa-fw">
+                        <div class="icon-bg bg-red"></div>
+                    </i><span class="menu-title">销售策略</span></a>
+                      
+                    </li>
+                    <li><a href="#"><i class="fa fa-list fa-fw">
+                        <div class="icon-bg bg-yellow"></div>
+                    </i><span class="menu-title">运营方案</span></a>
+                       
+                    </li>
+                    <li><a href="#"><i class="fa fa-signal fa-fw">
+                        <div class="icon-bg bg-grey"></div>
+                    </i><span class="menu-title">财务分析</span></a>
+                      
+                    </li>
+                    <li><a href="#"><i class="fa fa-sitemap fa-fw">
+                        <div class="icon-bg bg-dark"></div>
+                    </i><span class="menu-title">附件</span></a>
+                      
+                    </li>
+					
+                  
+				   <li><i class="fa-pencil">
+                        <div class="icon-bg bg-dark"></div>
+                    </i><span class="menu-title">
+                    <input id="inputEmail" type="text" placeholder="栏目名称"  /></span>
+                      
+                    </li>
+                   
+                 
+                </ul>
+            </div>
+        </nav>
+
+            <div id="page-wrapper">
+               <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+                    <div class="page-header pull-left">
+                        <div class="page-title">
+                            执行概要</div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li><i class=""></i><i class="fa fa-angle-right"></i></li>
+                        <li class="hidden"><i class="fa fa-angle-right"></i></li>
+                     
+                    </ol>
+                    <div class="clearfix">
+                    </div>
+                </div>
+                <!--END TITLE & BREADCRUMB PAGE-->
+                <!--BEGIN CONTENT-->
+                <div class="page-content">
+                    <div id="tab-general">
+					<div class="col-md-9">
+                               
+                                <div id="generalTabContent" class="tab-content">
+                                    <div id="tab-edit" class="tab-pane fade in active">
+                                        <form  class="form-horizontal" id="form"><h3>公司信息</h3>
+
+                                            <div class="form-group"><label class="col-sm-3 control-label" >项目名称</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="XMName" placeholder="填写项目" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">项目介绍</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder="一句话介绍项目" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">创立时间</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="TXT" placeholder="公司成立时间" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">所在行业</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder="" class="form-control" data-form-pw="1445088003046.619"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+											       <div class="form-group"><label class="col-sm-3 control-label">创始人</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder="" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+											       <div class="form-group"><label class="col-sm-3 control-label">创立时间</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="datepicker-normal" placeholder="公司成立时间" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+											  <div class="form-group"><label class="col-sm-3 control-label">公司阶段</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><select class="form-control">
+                                                            <option>种子轮</option>
+                                                            <option>天使轮</option>
+														    <option>Pre A轮 </option>
+														    <option>A 轮</option>
+															<option>B 轮</option>
+															<option>C 轮</option>
+															<option>D 轮以上</option>
+															<option>成熟期</option>
+                                                        </select></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+											 <h3>产品展示</h3>
+                                            <div class="form-group"><label class="col-sm-3 control-label">网址</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder=" " class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">iOS</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder="" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">Android</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder="" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         <hr>
+                                            <h3>融资需求</h3>
+
+                                            <div class="form-group"><label class="col-sm-3 control-label">拟融资金额</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-4"><input type="text"  class="form-control"></div>
+													     <div class="col-xs-2"><select class="form-control">
+                                                            <option>万</option>
+                                                            <option>亿</option>
+														  </select></div>
+														 <div class="col-xs-3"><select class="form-control">
+                                                            <option>人民币</option>
+                                                            <option>美金</option>
+														 
+                                                        </select></div>
+                                                    </div></div>
+                                                    </div>
+                                            
+                                            <div class="form-group"><label class="col-sm-3 control-label">拟出让股份</label>
+													<div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-4"><input id="NGufen" type="text" class="form-control"></div>
+														<label ="col-sm-3 control-label">％</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        	<hr>
+                                            <h3>联系方式</h3>
+
+                                            <div class="form-group"><label class="col-sm-3 control-label">电话</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder="" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">微信</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder="" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        	<hr>
+                                             <h3>痛点 - 市场上未被满足的需求或未解决问题</h3> 简要描述企业发现并着手解决市场上的痛点，即市场上目前未被满足的需求或未解决的问题，内容包括：
+你的目标客户是谁？
+这些客户面对了怎样的问题？
+本段描述了企业的市场机会。<b style="color: red">样例:</b><button id="show" type="button" >显示</button>
+<div id="div1" style="display:none;">
+我们主要的目标顾客群是营养健康有问题的网民（比如:过度肥胖、营养不良、缺钙等）及其亲属朋友和学生网民。由于现实中提供营养保健咨询的机构主要为普通医疗机构，但这部分人群若非营养问题非常严重，通常不愿去普通医疗机构，所以网上专业营养保健网站就成为他们的首选。而目前国内专业营养健康保健网站尚是空白，所以本公司现在进入此市场是最佳切入时机。
+</div>
+                                            <div class="form-group"><label class="col-sm-3 control-label"></label>
+                                                <div >
+                                                    <div class="row">
+                                                        <div class="col-xs-12" >
+                                                        <script id="editor" type="text/plain" style="weith:600px;height:400px" ></script>
+<!--                                                         <textarea rows="50" cols="56"></textarea> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        	<hr>
+                                             <h3>解决方案  - 你通过怎样的产品/服务解决客户的需求</h3>
+                                            简要描述你主要赚钱的手段，内容包括：付费客户是谁？规模有多大？
+通过怎样的方式获得收入？
+建议本段写1~2种主要的收入来源。<b style="color: red">样例:</b><button id="show2" type="button" >显示</button>
+<div id="div2" style="display:none;">
+据我们的调研结果来看，有49，06%的被调查者有兴趣在网上进行交易，没有兴趣的有50，94%，有45，78%的被调查者有兴趣购买营养保健商品，54，22%没有兴趣购买，而在要购买的人群中，有23，81%会去医院购买，有69，05%会去超市或药店购买，而在调查的人当中竟没有采用网上订购，这是由国内的互联网环境所决定的，电子商务并不是一夜之间形成的，而是需要有一个渐进的过程，在中国，互联网的发展还处于起步阶段，尚不具备真正意义上的“电子商务”能力， 因此在公司刚开始时，更多地专注于基础的虚拟社区建设，以期培养国内用户熟悉并习惯于互联网这一全新的生活环境，逐渐建立起用户的忠诚度和信誉度，为以后的网上交易变的可信创造条件，这就解决了一个个电子商务发展过程中必须解决的问题——流量的多少及与顾客的关系，所以我们在公司成立初以社区建设为主，先赢得用户的关注，建立用户对网站的忠诚度，提高用户的网络使用技术，培养用户的网络生活习惯和建立用户间的网际关系等，建设高水准的网络社区，这是我们在初期的经营策略。
+</div>
+                                            <div class="form-group"><label class="col-sm-3 control-label"></label>
+                                                <div >
+                                                    <div class="row">
+                                                        <div class="col-xs-12" >
+                                                        <script id="textarea1" type="text/plain" style="weith:600px;height:400px" ></script>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+											<hr><br>
+                                        	<hr>
+                                             <h3>商业模式 - 通过什么手段赚钱</h3>
+                                           简要描述你主要赚钱的手段，内容包括：付费客户是谁？规模有多大？
+	通过怎样的方式获得收入？
+	建议本段写1~2种主要的收入来源。<b style="color: red">样例:</b><button id="show3" type="button" >显示</button>
+<div id="div3" style="display:none;">
+维康营养保健资讯公司主要是以社区服务为主要依托，为用户提供全方位的营养健康保健信息咨询服务;同时提供针对学生的专题附加服务，在公司成立2~3年，初步形成固定的顾客群，再开始开展相关产品的在线销售。
+据我们的调研结果来看，有49，06%的被调查者有兴趣在网上进行交易，没有兴趣的有50，94%，有45，78%的被调查者有兴趣购买营养保健商品，54，22%没有兴趣购买，而在要购买的人群中，有23，81%会去医院购买，有69，05%会去超市或药店购买，而在调查的人当中竟没有采用网上订购，这是由国内的互联网环境所决定的，电子商务并不是一夜之间形成的，而是需要有一个渐进的过程，在中国，互联网的发展还处于起步阶段，尚不具备真正意义上的“电子商务”能力， 因此在公司刚开始时，更多地专注于基础的虚拟社区建设，以期培养国内用户熟悉并习惯于互联网这一全新的生活环境，逐渐建立起用户的忠诚度和信誉度，为以后的网上交易变的可信创造条件，这就解决了一个个电子商务发展过程中必须解决的问题——流量的多少及与顾客的关系，所以我们在公司成立初以社区建设为主，先赢得用户的关注，建立用户对网站的忠诚度，提高用户的网络使用技术，培养用户的网络生活习惯和建立用户间的网际关系等，建设高水准的网络社区，这是我们在初期的经营策略。
+
+</div>
+                                            <div class="form-group"><label class="col-sm-3 control-label"></label>
+                                                <div >
+                                                    <div class="row">
+                                                        <div class="col-xs-12" >
+                                                        <script id="textarea2" type="text/plain" style="weith:600px;height:400px" ></script>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+											<div class=" text-right ">
+                                                    <button type="submit" class="btn btn-primary">保存</button>
+                                                </div>
+											<hr><br>
+                                          
+                                        </form>
+                                    </div>
+                       
+                            </div>
+					</div>
+                 </div>
+				 <!--BEGIN FOOTER-->
+                <div id="footer">
+                    <div class="copyright">
+                        <a href="http://easy.cn">2014 © EasyBP.cn</a></div>
+                </div>
+                <!-- <!--END FOOTER--> -->
+                    </div>
+                </div>
+                <!--END CONTENT-->
+             
+            </div>
+            <!--END PAGE WRAPPER-->
+    </div>
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-migrate-1.2.1.min.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap-hover-dropdown.js"></script>
+    <script src="script/html5shiv.js"></script>
+    <script src="script/respond.min.js"></script>
+    <script src="script/jquery.metisMenu.js"></script>
+    <script src="script/jquery.slimscroll.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/icheck.min.js"></script>
+    <script src="script/custom.min.js"></script>
+    <script src="script/jquery.news-ticker.js"></script>
+    <script src="script/jquery.menu.js"></script>
+    <script src="script/pace.min.js"></script>
+    <script src="script/holder.js"></script>
+    <script src="script/responsive-tabs.js"></script>
+    <script src="script/jquery.flot.js"></script>
+    <script src="script/jquery.flot.categories.js"></script>
+    <script src="script/jquery.flot.pie.js"></script>
+    <script src="script/jquery.flot.tooltip.js"></script>
+    <script src="script/jquery.flot.resize.js"></script>
+    <script src="script/jquery.flot.fillbetween.js"></script>
+    <script src="script/jquery.flot.stack.js"></script>
+    <script src="script/jquery.flot.spline.js"></script>
+    <script src="script/zabuto_calendar.min.js"></script>
+    <script src="script/index.js"></script>
+    <!--LOADING SCRIPTS FOR CHARTS-->
+    <script src="script/highcharts.js"></script>
+    <script src="script/data.js"></script>
+    <script src="script/drilldown.js"></script>
+    <script src="script/exporting.js"></script>
+    <script src="script/highcharts-more.js"></script>
+    <script src="script/charts-highchart-pie.js"></script>
+    <script src="script/charts-highchart-more.js"></script>
+    <!--CORE JAVASCRIPT-->
+    <script src="script/main.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script>    
+
+    $("#show").click(function(){
+        if($("#show").text()=='隐藏'){
+  		 	 $('#show').text("显示");
+  		 	 $("#div1").hide();
+		}else{
+			 $("#div1").show();
+			 $('#show').html("隐藏");
+			}
+	});
+    $("#show2").click(function(){
+        if($("#show2").text()=='隐藏'){
+  		 	 $('#show2').text("显示");
+  		 	 $("#div2").hide();
+		}else{
+			 $("#div2").show();
+			 $('#show2').html("隐藏");
+			}
+	});
+    $("#show3").click(function(){
+        if($("#show3").text()=='隐藏'){
+  		 	 $('#show3').text("显示");
+  		 	 $("#div3").hide();
+		}else{
+			 $("#div3").show();
+			 $('#show3').html("隐藏");
+			}
+	});
+    
+    
+    (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-145464-12', 'auto');
+        ga('send', 'pageview');
+
+      //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor');
+     // 两个都会起作用
+        UE.getEditor("textarea1");
+        UE.getEditor("textarea2");
+
+        function disableBtn(str) {
+            var div = document.getElementById('btns');
+            var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+            for (var i = 0, btn; btn = btns[i++];) {
+                if (btn.id == str) {
+                    UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+                } else {
+                    btn.setAttribute("disabled", "true");
+                }
+            }
+        }
+        function enableBtn() {
+            var div = document.getElementById('btns');
+            var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+            for (var i = 0, btn; btn = btns[i++];) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            }
+        }
+
+        function getLocalData () {
+            alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+        }
+
+        function clearLocalData () {
+            UE.getEditor('editor').execCommand( "clearlocaldata" );
+            alert("已清空草稿箱")
+        }
+        
+        $('#form').submit(function() {
+            alert($(this).serialize());
+        	$.ajax({  
+                   url:"http://easybp.cn/setBookContent",  
+	                   dataType:'jsonp',  
+	                   data:$(this).serialize(),  
+	                   jsonp:'callback',
+	                   success:function(result) {
+	                   if(result.status==false){
+	                       	alert('数据保存失败');
+	                       	return false;
+	                   }else{
+	                       	alert('数据保存成功');
+	                	   window.location.href="index.html"
+	                       return true;
+	                   }
+	               }
+            });
+            return false;
+          });  
+        
+//         $(function(){
+//         	alert(1);
+        
+</script>
+</body>
+</html>

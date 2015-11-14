@@ -1,0 +1,23 @@
+ds.driver=com.mysql.jdbc.Driver
+ds.url=jdbc:mysql://120.24.81.151:3306/dream?characterEncoding=utf8
+ds.userName=root
+ds.password=
+ds.maxActive=50
+ds.maxWait = 1000
+ds.defaultAutoCommit = false
+
+
+#ds.driverClassName = oracle.jdbc.driver.OracleDriver
+#ds.url = jdbc:oracle:thin:@ 10.10.10.205:1521:df2
+#ds.userName = adventure
+#ds.password = adventure
+#ds.maxActive = 50
+#ds.maxWait = 1000
+#ds.defaultAutoCommit = false
+
+#connection.driverClass=com.microsoft.sqlserver.jdbc.SQLServerDriver
+#connection.jdbcUrl=jdbc:sqlserver://10.10.100.28:2433;DatabaseName=book
+#connection.username=bookuser
+#connection.password=123456
+#jdbc:mysql://192.168.30.15:3306/test?characterEncoding=UTF-8
+

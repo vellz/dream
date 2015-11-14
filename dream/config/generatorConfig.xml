@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" 
+"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="G:\workspaces\ssi\WebRoot\WEB-INF\lib\mysql-connector-java-5.1.6-bin.jar" />
+	<context id="db">
+	<property name="javaFileEncoding" value="UTF-8" />
+	<property name="beginningDelimiter" value="`"/>
+    	<property name="endingDelimiter" value="`"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+        <plugin type="com.dream.db.PaginationPlugin" />
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/dream" 
+			userId="root" password="" />
+
+		<javaModelGenerator targetPackage="com.dream.model" targetProject="dream">
+			<property name="rootClass" value="com.dream.db.BaseBean" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.dream.mapper" targetProject="dream" />
+
+		<javaClientGenerator targetPackage="com.dream.mapper" targetProject="dream" type="XMLMAPPER" />
+             <table schema="" tableName="user">
+                <property name="useActualColumnNames" value="true" />
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+	</context>
+</generatorConfiguration>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<util:properties id="ds" location="classpath:dataSource.properties" />
+	<!-- ************** DataSource1: dbcp 连接池1 **************** -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close" lazy-init="false">
+		<property name="driverClassName">
+			<value>#{ds['ds.driverClassName']}</value>
+		</property>
+		<property name="url">
+			<value>#{ds['ds.url']}</value>
+		</property>
+		<property name="username">
+			<value>#{ds['ds.userName']}</value>
+		</property>
+		<property name="password">
+			<value>#{ds['ds.password']}</value>
+		</property>
+		<property name="maxActive">
+			<value>#{ds['ds.maxActive']}</value>
+		</property>
+		<property name="maxWait">
+			<value>#{ds['ds.maxWait']}</value>
+		</property>
+	</bean>
+
+	<!-- ***************事务配置1************** -->
+<!-- 	<bean id="transactionManager" -->
+<!-- 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
+<!-- 		<property name="dataSource" ref="dataSource" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<aop:config> -->
+<!-- 		<aop:advisor pointcut="execution(* com.ym.market.service.*.*(..))" -->
+<!-- 			advice-ref="txAdvice" /> -->
+<!-- 	</aop:config> -->
+
+<!-- 	<tx:advice id="txAdvice" transaction-manager="transactionManager"> -->
+<!-- 		<tx:attributes> -->
+<!-- 			<tx:method name="get*" read-only="true" /> -->
+<!-- 			<tx:method name="query*" read-only="true" /> -->
+<!-- 			<tx:method name="find*" read-only="true" /> -->
+<!-- 			<tx:method name="load*" read-only="true" /> -->
+<!-- 			<tx:method name="select*" read-only="true" /> -->
+<!-- 			<tx:method name="*" propagation="REQUIRED" rollback-for="Exception" /> -->
+<!-- 		</tx:attributes> -->
+<!-- 	</tx:advice> -->
+
+		<!-- 扫描 MyBatis Sql -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations">
+			 <list>
+			  	<value>classpath:com/dream/mapper/*Mapper.xml</value>
+			 </list>
+		</property>
+	</bean>
+
+	<!-- 接口编程 -->
+	<!-- 扫描mapper.java  -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" autowire="byName">    
+	    <property name="basePackage" value="com.dream.mapper" />
+	    <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+	</bean>
+</beans>
