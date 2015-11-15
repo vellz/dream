@@ -13,14 +13,18 @@
 			connectionURL="jdbc:mysql://localhost/dream" 
 			userId="root" password="" />
 
-		<javaModelGenerator targetPackage="com.dream.model" targetProject="dream">
+		<javaModelGenerator targetPackage="com.dream.model" targetProject="dream-api">
 			<property name="rootClass" value="com.dream.db.BaseBean" />
 		</javaModelGenerator>
 
-		<sqlMapGenerator targetPackage="com.dream.mapper" targetProject="dream" />
+		<sqlMapGenerator targetPackage="com.dream.mapper" targetProject="dream-api" />
 
-		<javaClientGenerator targetPackage="com.dream.mapper" targetProject="dream" type="XMLMAPPER" />
+		<javaClientGenerator targetPackage="com.dream.mapper" targetProject="dream-api" type="XMLMAPPER" />
              <table schema="" tableName="user">
+                <property name="useActualColumnNames" value="true" />
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+             <table schema="" tableName="user_order">
                 <property name="useActualColumnNames" value="true" />
                 <generatedKey column="id" sqlStatement="MySql" identity="true" />
             </table>

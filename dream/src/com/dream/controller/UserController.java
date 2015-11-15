@@ -6,19 +6,24 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.dream.model.MsgResult;
 import com.dream.model.User;
 import com.dream.service.UserService;
 
 @Controller
 @RequestMapping("/user")
 public class UserController extends BaseController{
-
+	private final static String CHARSET = ";charset=UTF-8";
 	@Autowired
 	private UserService userService;
+	
+	
 	
 	/**
 	 * 获取所有用户列表
@@ -26,11 +31,62 @@ public class UserController extends BaseController{
 	 * @return
 	 */
 	@RequestMapping("/getAllUser")
-	public ModelAndView getAllUser(HttpServletRequest request){
+	public ModelAndView getAllUser(HttpServletRequest request)throws Exception{
 		List<User> findAll = userService.findAll();
 		request.setAttribute("userList", findAll);
 		Map<String,Object>  context = getRootMap();
 		return forword("allUser", context);
+	}
+	
+	/**
+	 * reg
+	 * @param request
+	 * @return
+	 * @throws Exception 
+	 */
+	@RequestMapping(value="/reg",produces = MediaType.APPLICATION_JSON_VALUE + CHARSET)
+	@ResponseBody
+	public MsgResult reg(User user,HttpServletRequest request) throws Exception{
+		MsgResult msgResult = userService.add(user);
+		return msgResult;
+	}
+	
+	@RequestMapping("/get")
+	public @ResponseBody String get() {   
+		return "测试用户";
+    }
+	
+	/**
+	 * reg
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/getUser")
+	@ResponseBody
+	public MsgResult getUser(User userReq,HttpServletRequest request)throws Exception{
+		User dbuser=getUser(request);
+		if(userReq.getId()!=null){
+			dbuser = userService.getUserMapper().selectByPrimaryKey(userReq.getId());
+		}
+		MsgResult msgResult = new MsgResult();
+		msgResult.setData(dbuser);
+		return msgResult;
+	}
+	
+	/**
+	 * reg
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="/login",produces = MediaType.APPLICATION_JSON_VALUE + CHARSET)
+	@ResponseBody
+	public MsgResult login(User userReq,HttpServletRequest request) throws Exception{
+		MsgResult msgResult = new MsgResult();
+		msgResult = userService.getUser(userReq);
+		if(msgResult.getSuccess()!=null&&msgResult.getSuccess()){
+			setUser(request, (User)msgResult.getData());
+		}
+		return msgResult;
 	}
 	
 	/**
@@ -39,7 +95,7 @@ public class UserController extends BaseController{
 	 * @return
 	 */
 	@RequestMapping("/toAddUser")
-	public String toAddUser(HttpServletRequest request){
+	public String toAddUser(HttpServletRequest request) throws Exception{
 		return "/addUser";
 	}
 //	/**

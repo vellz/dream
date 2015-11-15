@@ -13,6 +13,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.dream.model.User;
 import com.dream.service.util.AjaxStatusCodeType;
 import com.dream.service.util.HtmlUtil;
 
@@ -26,7 +27,28 @@ public class BaseController {
 	public final static String CODE = "statusCode";
 
 	public final static String LOGOUT_FLAG = "logoutFlag";
-
+	
+	public final static String SESSION_USER="SESSION_USER";
+	
+	/**
+	  * 设置用户信息 到session
+	  * @param request
+	  * @param user
+	  */
+	 public static void setUser(HttpServletRequest request,User user){
+		 user.setPassword(null);
+		 request.getSession(true).setAttribute(SESSION_USER, user);
+	 }
+	 
+	 /**
+	  * 从session中获取用户信息
+	  * @param request
+	  * @return SysUser
+	  */
+	 public static User getUser(HttpServletRequest request){
+		return (User)request.getSession(true).getAttribute(SESSION_USER);
+	 }
+	
 	@InitBinder
 	protected void initBinder(WebDataBinder binder) {
 		binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"), true));
